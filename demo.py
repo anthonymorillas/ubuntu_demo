@@ -11,12 +11,12 @@ st.title('U B U N T U')
 # @st.cache_data
 def load_data():
     # Cargar datos y especificar tipo de datos para la columna problemática
-    data = pd.read_csv('demo.csv', dtype={'column_name': str})
+    data = pd.read_csv('demo.csv', nrows=100, dtype={'column_name': str})
     rel_platos = pd.read_csv('rel_platos.csv', dtype={'column_name': str})
     platos = pd.read_csv('platos.csv', dtype={'column_name': str})
     data['createdAt'] = pd.to_datetime(data['createdAt'])
-    data = pd.merge(data, rel_platos, on='id_pedido', how='outer')
-    data = pd.merge(data, platos, on='id_plato', how='outer')
+    data = pd.merge(data, rel_platos, on='id_pedido', how='inner')
+    data = pd.merge(data, platos, on='id_plato', how='inner')
     # data['nombre_plato'] = data['nombre_plato'].replace({'1/2 Pollo': 'medio_pollo', '2342sdfsdf': 'xx'})
     return data
 
