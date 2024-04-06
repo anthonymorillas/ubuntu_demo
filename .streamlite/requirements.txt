@@ -1,5 +1,0 @@
-streamlit==1.33.0
-pandas
-mysql-connector-python
-requests
-altair
