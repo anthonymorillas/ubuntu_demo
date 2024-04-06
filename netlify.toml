@@ -1,0 +1,7 @@
+[connections.mysql]
+dialect = "mysql"
+host = "db-mysql-nyc3-09346-do-user-6874547-0.c.db.ondigitalocean.com"
+port = 25060
+database = "ubuntu_pos"
+username = "ubuntu_root"
+password = "AVNS_q1uxIVKpMQLTf1tmJSC"
